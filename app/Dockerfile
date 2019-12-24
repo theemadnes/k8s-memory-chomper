@@ -11,7 +11,7 @@ COPY . /app
 RUN addgroup -S appuser && adduser -S -G appuser appuser
 USER appuser
 
-#ENTRYPOINT [ "python" ]
+ENTRYPOINT [ "python" ]
 
-#CMD [ "app.py" ]
-CMD ["python app.py"]
+CMD [ "app.py" ]
+#CMD ["python app.py"]
