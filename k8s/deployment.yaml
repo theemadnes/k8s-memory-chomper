@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
       - name: memory-chomper
-        image: gcr.io/alexmattson-scratch/memory-chomper-01@sha256:2a8482bfb3624b816296971208aca833da137a6bcf32ed4ab2189da9e066e480
-        args: ["--megabytes 1000"]
+        image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:13a2c10dedd35da49488146c691000c30f99afa178d1c3f0c6b152ee5436af51
+        #command: ["app.py"]
+        args: ["app.py --megabytes 1000"]
         resources:
           requests:
             memory: "64Mi"
