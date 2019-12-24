@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: memory-chomper
-  replicas: 3
+  replicas: 50
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: memory-chomper
-        image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:2fbbc40b4081dc4d0d6347cca1e67a6fa9d879e94dd4b0334a9c08aacabf8dbc
+        image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:31435f0bc894ec1310a68e942573b3ab1a05b0ed021e0b4b1f2b438ea2ad49a4
         #command: ["/app/app.py"]
         args: ["app.py", "--megabytes", "1000"]
         env:
@@ -25,5 +25,5 @@ spec:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1200Mi"
+            memory: "1000Mi"
             cpu: "2000m"
