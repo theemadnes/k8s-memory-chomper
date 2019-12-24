@@ -1,6 +1,14 @@
 import time
-#import sys
+import logging
+import sys
 import argparse
+
+out_hdlr = logging.StreamHandler(sys.stdout)
+fmt = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+out_hdlr.setFormatter(fmt)
+out_hdlr.setLevel(logging.INFO)
+logging.getLogger().addHandler(out_hdlr)
+logging.getLogger().setLevel(logging.INFO)
 
 parser = argparse.ArgumentParser(description='Chomp (consume) some memory.')
 parser.add_argument('--megabytes', help="How many megabytes should this run chomp?")
