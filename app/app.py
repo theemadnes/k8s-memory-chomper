@@ -22,4 +22,8 @@ for i in range(0,int(args.megabytes)):
     if not (i+1)%100:
 
         print("Chomped %i megabytes" % (i+1))
-        time.sleep(0.5)
+        time.sleep(1)
+
+while True:
+
+    print("Done chomping...")
