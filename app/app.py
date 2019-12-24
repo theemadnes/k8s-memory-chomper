@@ -3,7 +3,7 @@ import time
 import argparse
 
 parser = argparse.ArgumentParser(description='Chomp (consume) some memory.')
-parser.add_argument('--megabytes', help="How many megabytes should this run consume?")
+parser.add_argument('--megabytes', help="How many megabytes should this run chomp?")
 
 args = parser.parse_args()
 
@@ -11,7 +11,7 @@ args = parser.parse_args()
 if not args.megabytes:
     args.megabytes = 256000
 
-print("Consuming %s megabytes..." % (args.megabytes)) 
+print("Chomping %s megabytes..." % (args.megabytes)) 
 
 chomp_dict = {}
 
@@ -26,4 +26,5 @@ for i in range(0,int(args.megabytes)):
 
 while True:
 
-    print("Done chomping...")
+    print("Done chomping... Now sleeping every 20s")
+    time.sleep(20)
