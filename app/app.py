@@ -19,7 +19,7 @@ args = parser.parse_args()
 if not args.megabytes:
     args.megabytes = 256000
 
-print("Chomping %s megabytes..." % (args.megabytes)) 
+logging.info("Chomping %s megabytes..." % (args.megabytes)) 
 
 chomp_dict = {}
 
@@ -29,10 +29,10 @@ for i in range(0,int(args.megabytes)):
 
     if not (i+1)%100:
 
-        print("Chomped %i megabytes" % (i+1))
+        logging.info("Chomped %i megabytes" % (i+1))
         time.sleep(1)
 
 while True:
 
-    print("Done chomping... Now sleeping every 20s")
+    logging.info("Done chomping... Now sleeping every 20s")
     time.sleep(20)
