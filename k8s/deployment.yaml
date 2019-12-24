@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory-chomper
+spec:
+  selector:
+    matchLabels:
+      run: memory-chomper
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: memory-chomper
+    spec:
+      containers:
+      - name: memory-chomper
+        image: gcr.io/alexmattson-scratch/memory-chomper-01@sha256:2a8482bfb3624b816296971208aca833da137a6bcf32ed4ab2189da9e066e480
+        args: ["--megabytes 1000"]
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1200Mi"
+            cpu: "2000m"
