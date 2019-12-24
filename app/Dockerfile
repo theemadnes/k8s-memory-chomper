@@ -13,4 +13,5 @@ USER appuser
 
 #ENTRYPOINT [ "python" ]
 
-CMD [ "python app.py" ]
+#CMD [ "app.py" ]
+CMD ["python app.py"]
