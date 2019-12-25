@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: memory-chomper
-        image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:7f17a91565492d3629b730e752d10a3420fb37ce056675f942027f0463fc9772
+        image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:1d029e9dbe0d433729aa5fc93afe7127368680ae3781c00d5b4edf50f7284a14
         #command: ["/app/app.py"]
         args: ["app.py", "--megabytes", "4000", "--delay", "10"]
         env:
