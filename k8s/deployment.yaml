@@ -16,7 +16,7 @@ spec:
       - name: memory-chomper
         image: gcr.io/alexmattson-scratch/github.com/theemadnes/k8s-memory-chomper@sha256:31435f0bc894ec1310a68e942573b3ab1a05b0ed021e0b4b1f2b438ea2ad49a4
         #command: ["/app/app.py"]
-        args: ["app.py", "--megabytes", "1000"]
+        args: ["app.py", "--megabytes", "1000", "--delay", "10"]
         env:
         - name: PYTHONUNBUFFERED
           value: "0"
