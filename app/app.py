@@ -27,6 +27,7 @@ for i in range(0, args.megabytes):
     
     chomp_dict[i] = bytearray(1024000)
 
+    # log every 100MB
     if not (i+1)%100:
 
         logging.info("Chomped %i megabytes" % (i+1))
